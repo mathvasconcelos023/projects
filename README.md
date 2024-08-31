@@ -1,6 +1,6 @@
 # README
 
-![FOTO DA ARQUITETURA SUGERIDA]
+![ARQUITETURA SUGERIDA](./docs/suggested_architecture.drawio.png)
 
 ## Motivador da escolha de uma fila Kafka para pedidos
 
