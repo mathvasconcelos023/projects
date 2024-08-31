@@ -103,6 +103,12 @@ def sales_transactions_bronze():
 
 def sales_transactions_silver():
   df = dlt.read_stream("sales_transactions_bronze")
-  df = df.select("transaction_no", "date", "product_no", "product_name", "price",
-    "quantity", "customer_no", "country")
+  df = df.select("transaction_no",
+                 to_date("date", "dd/MM/yyyy").alias("date"),
+                 "product_no",
+                 "product_name",
+                 "price",
+                 "quantity",
+                 "customer_no",
+                 "country")
   return df
