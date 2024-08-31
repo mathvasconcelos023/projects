@@ -33,7 +33,7 @@ import dlt
 
 topic = "<application-topic>" # Tópico relacionado a essa fila Kafka.
 
-# Uma boa prática é colocar todas as credenciais no secrets, para evitar a exposição de chaves de API em nossos notebooks.
+# Uma boa prática é colocar todas as credenciais no secrets, para evitar a exposição de chaves em nossos notebooks.
 
 kafka_broker = dbutils.secrets.get(scope="kafka", key="server")
 confluent_api_key = dbutils.secrets.get(scope="confluent_api", key="key")
